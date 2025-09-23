@@ -1,11 +1,13 @@
 # Proyecto IS | Sistema de recepción de citas médicas e inventario.
-**Carrera de Ingeniería en Sistemas Computacionales**
-**Materia:** Ingeniería de Software
-**Fecha de inicio:** 9 de Septiembre de 2025
+
 
 ### Integrantes
 - Kevin Peralta Nava Peralta
 - **N° de control:**22161178
+**Carrera de Ingeniería en Sistemas Computacionales**
+**Materia:** Ingeniería de Software
+**Fecha de inicio:** 9 de Septiembre de 2025
+
 
 ---
 
