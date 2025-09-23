@@ -11,7 +11,7 @@
 
 ---
 
-##  Objetivo de proyecto
+##  Objetivo del proyecto
 El objetivo principal de este proyecto es poder ver los diferentes procesos por los que pasa la creación / desarollo / vida util de un software y su implementación de forma practica, especificamente un sistema hecho para optimizar la gestión de citas médicas y la administración de expedientes de los pacientes en una clínica. 
 
 **El sistema permitirá:**
