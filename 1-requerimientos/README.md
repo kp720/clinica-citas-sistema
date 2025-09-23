@@ -2,149 +2,112 @@
 
 ### **A. Gestión de Citas**
 
-1.  **¿Qué canales utiliza actualmente para programar citas?  **
-    Las citas se programan principalmente en persona o por teléfono.
-    Algunos pacientes simplemente llegan sin cita previa, lo cual es
-    común.
+1.  **¿Qué canales utiliza actualmente para programar citas?**
+    - Las citas se programan principalmente en persona o por teléfono.
+    Algunos pacientes simplemente llegan sin cita previa, lo cual es común.
 
-2.  **¿Qué tan eficiente es el proceso de programación de citas?  **
-    Moderadamente eficiente. Funciona bien porque el volumen de
-    pacientes no es muy alto, pero en días ocupados puede ser
-    desordenado debido a la falta de un sistema formal.
+2.  **¿Qué tan eficiente es el proceso de programación de citas?**
+    - Moderadamente eficiente. Funciona bien porque el volumen de pacientes no es muy alto, pero en días ocupados puede ser desordenado debido a la falta de un sistema formal.
 
-3.  **¿Cuánto tiempo promedio toma programar o reprogramar una cita?  **
-    Entre 5 y 10 minutos, ya que la mayoría de las citas se registran
-    manualmente en un cuaderno o una agenda física.
+3.  **¿Cuánto tiempo promedio toma programar o reprogramar una cita?**
+    - Entre 5 y 10 minutos, ya que la mayoría de las citas se registran manualmente en un cuaderno o una agenda física.
 
-4.  **¿Se realiza algún recordatorio automático para las citas?  **
-    No. Normalmente, se confía en que los pacientes recuerden sus citas.
-    Algunos pacientes reciben un recordatorio verbal si llaman para
-    confirmar.
+4.  **¿Se realiza algún recordatorio automático para las citas?**
+    - No. Normalmente, se confía en que los pacientes recuerden sus citas.
+    Algunos pacientes reciben un recordatorio verbal si llaman para confirmar.
 
-5.  **¿Existen problemas frecuentes en el manejo de citas
-    (cancelaciones, duplicados, olvidos)?  **
-    Sí. Algunos pacientes olvidan sus citas, y otros llegan sin avisar,
-    lo que puede causar retrasos y confusión.
+5.  **¿Existen problemas frecuentes en el manejo de citas (cancelaciones, duplicados, olvidos)?**
+    - Sí. Algunos pacientes olvidan sus citas, y otros llegan sin avisar, lo que puede causar retrasos y confusión.
 
 ### **B. Atención al Paciente**
 
-1.  **¿Cómo se registra la llegada del paciente al consultorio?  **
-    El registro se hace manualmente en una hoja o cuaderno. El personal
+1.  **¿Cómo se registra la llegada del paciente al consultorio?**
+    - El registro se hace manualmente en una hoja o cuaderno. El personal
     anota el nombre del paciente y el motivo de la consulta.
 
-2.  **¿Cuánto tiempo espera en promedio un paciente antes de ser
-    atendido?  **
-    Generalmente, unos 15-30 minutos, pero puede ser más en días
-    concurridos o cuando hay emergencias.
+2.  **¿Cuánto tiempo espera en promedio un paciente antes de ser atendido?**
+    - Generalmente, unos 15-30 minutos, pero puede ser más en días concurridos o cuando hay emergencias.
 
 3.  **¿Existen pasos redundantes o innecesarios en el flujo de atención
-    al paciente?  **
-    Sí. Por ejemplo, el registro manual a veces se repite si la
+    al paciente?**
+    - Sí. Por ejemplo, el registro manual a veces se repite si la
     información se transcribe en otro lugar después de la consulta.
 
 4.  **¿Qué tan accesible y claro es el historial clínico del paciente
-    para los médicos?  **
-    El historial clínico suele ser limitado y en papel, lo que dificulta
-    el acceso rápido o la actualización. Algunos pacientes no tienen un
-    registro formal, y el médico depende de lo que recuerdan.
+    para los médicos?**
+    - El historial clínico suele ser limitado y en papel, lo que dificulta el acceso rápido o la actualización. Algunos pacientes no tienen un registro formal, y el médico depende de lo que recuerdan.
 
 ### **C. Consulta Médica**
 
 1.  **¿Qué herramientas utiliza el médico para registrar información
-    durante la consulta?  **
-    Se utiliza principalmente papel y bolígrafo para registrar síntomas,
-    diagnósticos y tratamientos. En algunos casos, un cuaderno exclusivo
-    del consultorio.
+    durante la consulta?**
+    - Se utiliza principalmente papel y bolígrafo para registrar síntomas, diagnósticos y tratamientos. En algunos casos, un cuaderno exclusivo del consultorio.
 
 2.  **¿Hay algún problema técnico con el sistema de registro de
-    consultas (lento, desactualizado, etc.)?  **
-    No aplica, ya que el sistema es manual. Sin embargo, el riesgo de
-    pérdida de información o errores por caligrafía ilegible es un
-    problema.
+    consultas (lento, desactualizado, etc.)?**
+    - No aplica, ya que el sistema es manual. Sin embargo, el riesgo de pérdida de información o errores por caligrafía ilegible es un problema.
 
 3.  **¿Se realizan diagnósticos auxiliares (exámenes básicos) en el
-    consultorio?  **
-    Sí, pero son limitados. Por ejemplo, se toman la presión arterial y
-    los niveles de glucosa con equipos básicos.
+    consultorio?**
+    - Sí, pero son limitados. Por ejemplo, se toman la presión arterial y los niveles de glucosa con equipos básicos.
 
-4.  **¿Cómo se emiten las recetas médicas?  **
-    Las recetas se escriben a mano. Se entregan directamente al
-    paciente, y en la mayoría de los casos, el medicamento se dispensa
-    en la farmacia anexa.
+4.  **¿Cómo se emiten las recetas médicas?**
+    - Las recetas se escriben a mano. Se entregan directamente al paciente, y en la mayoría de los casos, el medicamento se dispensa en la farmacia anexa.
 
 ### **D. Dispensación de Medicamentos**
 
-1.  **¿Qué sistema utiliza la farmacia para gestionar inventarios?  **
-    El inventario se gestiona manualmente en una libreta o tabla. Se
-    hace una revisión periódica para actualizar la información.
+1.  **¿Qué sistema utiliza la farmacia para gestionar inventarios?**
+    - El inventario se gestiona manualmente en una libreta o tabla. Se hace una revisión periódica para actualizar la información.
 
-2.  **¿Cómo se verifica la validez de las recetas médicas?  **
-    El personal de la farmacia revisa visualmente la receta y se asegura
-    de que esté firmada y sellada por el médico.
+2.  **¿Cómo se verifica la validez de las recetas médicas?**
+    - El personal de la farmacia revisa visualmente la receta y se asegura de que esté firmada y sellada por el médico.
 
 3.  **¿Existen problemas frecuentes en el inventario, como faltantes o
-    caducidades?  **
-    Sí. A veces hay faltantes porque los proveedores no entregan a
-    tiempo, y los medicamentos de baja rotación corren riesgo de
-    caducidad.
+    caducidades?**
+    - Sí. A veces hay faltantes porque los proveedores no entregan a tiempo, y los medicamentos de baja rotación corren riesgo de caducidad.
 
 4.  **¿El personal de la farmacia ofrece orientación técnica sobre los
-    medicamentos?  **
-    Sí. Se explican las dosis y cómo tomar los medicamentos, pero de
-    manera básica. Para dudas más complejas, se consulta al médico
-    directamente.
+    medicamentos?**
+    - Sí. Se explican las dosis y cómo tomar los medicamentos, pero de manera básica. Para dudas más complejas, se consulta al médico directamente.
 
 ### **E. Gestión Operativa**
 
 1.  **¿Qué herramientas utiliza para la gestión integral del
-    consultorio/farmacia?  **
-    Principalmente herramientas manuales como cuadernos y registros en
-    papel. No contamos con sistemas digitales.
+    consultorio/farmacia?**
+    - Principalmente herramientas manuales como cuadernos y registros en papel. No contamos con sistemas digitales.
 
-2.  **¿Con qué frecuencia se realizan auditorías de procesos o
-    inventarios?  **
-    Cada mes se revisa el inventario y los procesos de atención, pero de
-    forma informal.
+3.  **¿Con qué frecuencia se realizan auditorías de procesos o
+    inventarios?**
+    - Cada mes se revisa el inventario y los procesos de atención, pero de forma informal.
 
-3.  **¿Qué tan eficiente considera la comunicación entre las áreas
-    (consultorio, farmacia)?  **
-    Es buena, ya que el personal es reducido y trabaja en el mismo
-    espacio, pero a veces hay confusión en los horarios o registros.
+4.  **¿Qué tan eficiente considera la comunicación entre las áreas
+    (consultorio, farmacia)?**
+    - Es buena, ya que el personal es reducido y trabaja en el mismo espacio, pero a veces hay confusión en los horarios o registros.
 
-4.  **¿Qué tan accesibles son los reportes técnicos o financieros para
-    la toma de decisiones?  **
-    Los reportes financieros son básicos y se llevan en hojas de cálculo
-    o manualmente, lo que dificulta un análisis detallado.
-
+5.  **¿Qué tan accesibles son los reportes técnicos o financieros para
+    la toma de decisiones?**
+    - Los reportes financieros son básicos y se llevan en hojas de cálculo o manualmente, lo que dificulta un análisis detallado.
+    
 ### **F. Identificación de Problemas y Mejoras**
 
 1.  **¿Cuáles son los principales problemas técnicos que enfrenta
     actualmente en los procesos?**
-
     - Retrasos por registros manuales.
-
     - Riesgo de pérdida de información.
-
     - Dificultad para manejar un inventario exacto.
 
 2.  **¿Qué tecnología o automatización adicional considera que mejoraría
     los procesos?**
-
     - Un sistema básico de gestión de citas e inventarios.
-
     - Digitalización del historial clínico y las recetas.
 
 3.  **¿Hay capacitación continua para el personal en el uso de
-    herramientas técnicas?  **
-    No, porque actualmente no usamos tecnología avanzada. Sin embargo,
-    sería útil capacitar al personal en el manejo de sistemas básicos si
-    se implementaran.
+    herramientas técnicas?**
+    - No, porque actualmente no usamos tecnología avanzada. Sin embargo, sería útil capacitar al personal en el manejo de sistemas básicos si se implementaran.
 
 4.  **¿Cómo evalúa la satisfacción del paciente respecto a los tiempos y
-    calidad de los servicios?  **
-    Los pacientes están generalmente satisfechos con el trato personal y
-    la atención. Sin embargo, los tiempos de espera y la falta de
-    medicamentos son las quejas más comunes.
+    calidad de los servicios?**
+    - Los pacientes están generalmente satisfechos con el trato personal y la atención. Sin embargo, los tiempos de espera y la falta de medicamentos son las quejas más comunes.
 
 ## **1. Requerimientos funcionales**
 
