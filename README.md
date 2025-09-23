@@ -3,7 +3,7 @@
 **Materia:** Ingeniería de Software
 **Fecha de inicio:** 9 de Septiembre de 2025
 
-## Integrantes
+### Integrantes
 - Kevin Peralta Nava Peralta
 - **N° de control:**22161178
 
@@ -18,13 +18,13 @@ El objetivo principal de este proyecto es poder ver los diferentes procesos por 
 - Seguridad en los datos médicos y personales.
 - Escalabilidad para adaptarse al crecimiento de la clínica.
 
-## Tecnologías usadas
+### Tecnologías usadas
 - **Lenguaje principal:** Java
 - **Base de datos:** MySQL
 
 ---
 
-## Estructura del Repositorio
+### Estructura del Repositorio
 
 ```plaintext
 /documentacion
