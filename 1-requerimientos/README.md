@@ -203,16 +203,11 @@
   permitir agregar modificaciones sin afectar el resto del sistema.
 
 ## **3. Requerimientos de dominio**
+-El sistema debe permitir a cada paciente tener un único registro en el sistema basado en su información personal para evitar duplicados.
 
-> -El sistema debe permitir a cada paciente tener un único registro en
-> el sistema basado en su información personal para evitar duplicados.
->
-> -El sistema solo debe mostrar el registro del paciente con información
-> mínima pero necesaria para la atención médica.
->
-> -El sistema solo debe permitir agendar citas al médico dentro de su
-> horario de trabajo. No puede tener más citas de las que su horario
-> permite.
+-El sistema solo debe mostrar el registro del paciente con información mínima pero necesaria para la atención médica.
+
+-El sistema solo debe permitir agendar citas al médico dentro de su horario de trabajo. No puede tener más citas de las que su horario permite.
 >
 > -El sistema debe permitir el auto-rellenado de datos específicos en la
 > agendación de citas.
