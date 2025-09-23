@@ -146,9 +146,7 @@
     la atención. Sin embargo, los tiempos de espera y la falta de
     medicamentos son las quejas más comunes.
 
-# **Documentación**
-
-## **i. Requerimientos funcionales**
+## **1. Requerimientos funcionales**
 
 - **Registro de pacientes:** El sistema debe permitir registrar
   información básica de los pacientes.
@@ -216,7 +214,7 @@
 >
 > \+ Recordatorio de próximas citas.
 
-## **ii. Requerimientos no funcionales**
+## **2. Requerimientos no funcionales**
 
 - **Seguridad:** El sistema debe cumplir con estándares de seguridad
   para proteger la información del paciente.
@@ -241,7 +239,7 @@
 - **Mantenibilidad actualizaciones o del sistema:** El sistema debe
   permitir agregar modificaciones sin afectar el resto del sistema.
 
-## **iii. Requerimientos de dominio**
+## **3. Requerimientos de dominio**
 
 > -El sistema debe permitir a cada paciente tener un único registro en
 > el sistema basado en su información personal para evitar duplicados.
