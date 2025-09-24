@@ -15,7 +15,7 @@ y la conexión del Encargado con la generación de citas para pacientes.
 Este diagrama sirve como base para identificar los elementos clave del
 sistema y su posterior implementación.
 
-<img src="./media/image1.jpg" style="width:6.26772in;height:6.43056in" alt="Diagrama El contenido generado por IA puede ser incorrecto." />
+<img src="./media/image1.jpg" style="width:6.26772in;height:6.43056in" />
 
 **b. Diagrama Entidad-Relación**
 

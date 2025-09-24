@@ -1,9 +1,9 @@
 # 2. Modelado de procesos
 
-A. **Procesos de la Farmacia y Consultorio La Económica**
+A. **Procesos de la Farmacia y Consultorio "Salud Integral"**
 
 - El siguiente diagrama BPMN muestra los procesos realizados en El
-consultorio y Farmacia La económica, los cuales son: registro de
+consultorio y Farmacia "Salud Integral", los cuales son: registro de
 usuario, generación de cita y expediente médico.
 
 > <img src="./media/image1.png" style="width:6.26772in;height:3.54167in" />
@@ -11,7 +11,7 @@ usuario, generación de cita y expediente médico.
 B.  **Optimización de procesos**
 
 - El siguiente diagrama BPMN muestra los procesos optimizados del
-Consultorio y Farmacia “La Económica”, como el crear usuario en el
+Consultorio y Farmacia “Salud Integral”, como el crear usuario en el
 sistema propuesto, generación de cita y generación de expediente médico,
 este diagrama muestra los procesos más a detalle, lo cual realizará el
 sistema.

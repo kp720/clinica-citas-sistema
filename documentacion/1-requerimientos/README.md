@@ -121,19 +121,19 @@
 
 <!-- -->
 
-- Fecha y hora de la cita.
+	- Fecha y hora de la cita.
 
 <!-- -->
 
-- Tipo de consulta.
+	- Tipo de consulta.
 
 <!-- -->
 
-- Médico asignado.
+	- Médico asignado.
 
 <!-- -->
 
-- Duración de la cita.
+	- Duración de la cita.
 
 <!-- -->
 
@@ -147,19 +147,19 @@
 
 **Incluyendo:**
 
-- Pacientes.
+	- Pacientes.
 
 <!-- -->
 
-- Fecha y hora de las citas.
+	- Fecha y hora de las citas.
 
 <!-- -->
 
-- Tipo de consulta.
+	- Tipo de consulta.
 
 <!-- -->
 
-- Médico.
+	- Médico.
 
 <!-- -->
 
@@ -171,11 +171,11 @@
 - **Notificaciones:** El sistema debe enviar notificaciones a los
   pacientes y médicos sobre:
 
-> \+ Citas programadas,
->
-> \+ Cambio sobre las citas.
->
-> \+ Recordatorio de próximas citas.
+	- Citas programadas,
+
+	- Cambio sobre las citas.
+
+	- Recordatorio de próximas citas.
 
 ## **2. Requerimientos no funcionales**
 
@@ -203,19 +203,19 @@
   permitir agregar modificaciones sin afectar el resto del sistema.
 
 ## **3. Requerimientos de dominio**
--El sistema debe permitir a cada paciente tener un único registro en el sistema basado en su información personal para evitar duplicados.
+- El sistema debe permitir a cada paciente tener un único registro en el sistema basado en su información personal para evitar duplicados.
 
--El sistema solo debe mostrar el registro del paciente con información mínima pero necesaria para la atención médica.
+- El sistema solo debe mostrar el registro del paciente con información mínima pero necesaria para la atención médica.
 
--El sistema solo debe permitir agendar citas al médico dentro de su horario de trabajo. No puede tener más citas de las que su horario permite.
->
-> -El sistema debe permitir el auto-rellenado de datos específicos en la
-> agendación de citas.
->
-> -El sistema solo debe permitir a la agenda mostrar las citas
-> confirmadas y los cambios importantes a las mismas.
+- El sistema solo debe permitir agendar citas al médico dentro de su horario de trabajo. No puede tener más citas de las que su horario permite.
 
--El sistema debe mostrar las citas de forma jerárquica y visual según
+- El sistema debe permitir el auto-rellenado de datos específicos en la
+agendación de citas.
+
+- El sistema solo debe permitir a la agenda mostrar las citas
+confirmadas y los cambios importantes a las mismas.
+
+- El sistema debe mostrar las citas de forma jerárquica y visual según
 fecha y hora.
 
 ## Condiciones de éxito
