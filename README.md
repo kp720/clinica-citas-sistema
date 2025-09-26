@@ -36,6 +36,7 @@ El objetivo principal de este proyecto es poder ver los diferentes procesos por 
     /4-modelo-dominio
     /5-estudio-factibilidad
     /6-anteproyecto
+    /7-diseños-prototipo
 
 /codigo
     /frontend
