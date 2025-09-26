@@ -35,7 +35,7 @@ El objetivo principal de este proyecto es poder ver los diferentes procesos por 
     /3-modelo-analisis
     /4-modelo-dominio
     /5-estudio-factibilidad
-
+    /6-anteproyecto
 
 /codigo
     /frontend
@@ -44,4 +44,6 @@ El objetivo principal de este proyecto es poder ver los diferentes procesos por 
 /archivos-originales
     /anteproyecto
     /estudio-factibilidad
+    /anteproyecto
+
 
