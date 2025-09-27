@@ -1,4 +1,4 @@
-# Proyecto IS | Sistema de recepción de citas médicas e inventario.
+# Proyecto IS | Sistema de recepción de citas médicas.
 
 
 ### Integrantes
