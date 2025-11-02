@@ -1,4 +1,4 @@
-# Diseños prototipo del sistema
+# 7. Diseños prototipo del sistema
 
 ## Menú principal
 
