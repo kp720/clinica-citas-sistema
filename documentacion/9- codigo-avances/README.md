@@ -1,56 +1,32 @@
-\# 9. Avances del código principal
+# 9. Avances del código principal
 
 
 
-\## Módulos completos
+## Módulos completos
 
-\- Login
-
-\- Doctor
-
-&nbsp; -Inicio
-
+- Login
+- Doctor
+  -Inicio
   -Expedientes
 
-
-
-\## Módulos faltantes
-
-\- Doctor
-
-&nbsp; -Pacientes
-
-\- Encargado 
-
+## Módulos faltantes
+- Doctor
+  -Pacientes
+  - Encargado 
   - Inicio
-
   - Expedientes
-
-&nbsp; - Pacientes
-
-&nbsp; - Doctores
-
-\- Administrador
-
-  - Inicio
-
+  - Pacientes
+  - Doctores
+- Administrador
+  - Inicio
   - Expedientes
-
   - Pacientes
-
   - Doctores
 
-
-
-\## Entorno de trabajo e integraciones
-
-\- Intellij
-
-\- Spring Boot
-
-\- MySQL
-
-\- Thymeleaf
-
-\- JPA
+## Entorno de trabajo e integraciones
+- Intellij
+- Spring Boot
+- MySQL
+- Thymeleaf
+- JPA
 
