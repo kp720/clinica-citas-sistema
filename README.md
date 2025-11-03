@@ -37,10 +37,8 @@ El objetivo principal de este proyecto es poder ver los diferentes procesos por 
     /5-estudio-factibilidad
     /6-anteproyecto
     /7-diseños-prototipo
-
-/codigo
-    /frontend
-    /base-datos
+    /8-database
+    /9-codigo-avances
 
 /archivos-originales
     /anteproyecto
