@@ -6,22 +6,22 @@
 
 - Login
 - Doctor
-  -Inicio
-  -Expedientes
+  - Inicio
+  - Expedientes
 
 ## Módulos faltantes
 - Doctor
-  -Pacientes
-  - Encargado 
-  - Inicio
-  - Expedientes
+  - Pacientes
+- Encargado
+  - Inicio
+  - Expedientes
   - Pacientes
   - Doctores
 - Administrador
   - Inicio
-  - Expedientes
-  - Pacientes
-  - Doctores
+  - Expedientes
+  - Pacientes
+  - Doctores
 
 ## Entorno de trabajo e integraciones
 - Intellij
