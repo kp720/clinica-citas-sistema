@@ -1,0 +1,109 @@
+/* Fondo general */
+body {
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/*
+.container {
+    width: 100%;
+    max-width: 400px;
+}
+
+
+.login-box {
+    background: white;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+*/
+
+.login {
+    text-align: center;
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+/* Títulos y Subtítulos*/
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: "Arial", sans-serif;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 0px;
+    font-family: "Arial", sans-serif;
+}
+
+h3 {
+    font-weight: 200;
+    text-align: center;
+    color: #333;
+    margin_top: 0px;
+    margin-bottom: 20px;
+    font-family: "Trebuchet MS", sans-serif;
+}
+
+/* Campos */
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    color: #555;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+/* Botón */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #3B3B3B;
+}
+
+/* Mensajes de error */
+.error {
+    color: red;
+    font-size: 0.9em;
+    text-align: center;
+    margin-top: 10px;
+}

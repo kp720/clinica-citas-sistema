@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body style="font-family: Arial, sans-serif; background-color: #fafafa;">
+
+<div style="
+    width: 450px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #dddddd;
+    background-color: #ffffff;
+">
+
+    <img src="cid:logoClinica" width="150" alt="Logo Clínica" style="display:block; margin:auto;">
+
+    <p style="font-size:20px; font-weight:bold; color:#2b6777; text-align:center;">
+        Confirmación de Cita Médica
+    </p>
+
+    <p style="font-size:15px; margin-top:15px;">
+        Estimado <strong th:text="${paciente}"></strong>,
+    </p>
+
+    <p style="font-size:15px;">
+        Su cita ha sido programada con el Dr. <strong th:text="${doctor}"></strong>.
+    </p>
+
+    <p style="font-size:15px;">
+        <strong>Fecha:</strong> <span th:text="${fecha}"></span><br>
+        <strong>Hora:</strong> <span th:text="${hora}"></span><br>
+        <strong>Tipo:</strong> <span th:text="${tipo}"></span>
+    </p>
+
+    <p style="font-size:15px; margin-top:20px;">
+        Gracias por confiar en <strong>Clínica Salud Integral</strong>.
+    </p>
+
+</div>
+
+</body>
+</html>
