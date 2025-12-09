@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nuevo paciente - Salud Integral</title>
+        <link rel="stylesheet" th:href="@{/css/style3.css}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    </head>
+
+    <body>
+        <div class="dashboard">
+            <aside class="sidebar">
+                <div class="logo">
+                    <img th:src="@{/img/logo.png}" alt="Logo de la Clínica" class="logo">
+                    <h2>Salud Integral</h2>
+                </div>
+
+                <!-- Barra lateral de la página -->
+                <nav class="menu">
+                    <p class="menu-title">Menú Principal</p>
+                    <ul>
+                        <li><a th:href="@{/encargado/home}"><i class="fa-solid fa-house"></i> Inicio</a></li>
+                        <li><a th:href="@{/encargado/citas}"><i class="fa-solid fa-calendar-check"></i> Citas</a></li>
+                        <li><a th:href="@{/encargado/expedientes}"><i class="fa-solid fa-folder-open"></i> Expedientes</a></li>
+                        <li><a th:href="@{/encargado/pacientes}"><i class="fa-solid fa-user-injured"></i> Pacientes </a></li>
+                        <li><a th:href="@{/encargado/doctores}"><i class="fa-solid fa-user-doctor"></i> Doctores </a></li>
+                    </ul>
+                </nav>
+
+                <div class="footer">
+                    <p>© 2025 Salud Integral</p>
+                </div>
+            </aside>
+
+            <!-- Contenido principal de la página -->
+            <main class="content">
+                <header>
+                    <div class="user-info" onclick="toggleMenu()">
+                        <i class="fa-solid fa-user"></i>
+                        <span th:text="${encargado.nombre}">Encargado</span>
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+
+                        <!-- Menú desplegable -->
+                        <div id="userMenu" class="dropdown-menu">
+
+                            <a th:href="@{/encargado/perfil}" class="profile-btn">
+                                <i class="fa-solid fa-id-badge"></i> Mi Perfil
+                            </a>
+
+                            <form th:action="@{/logout}" method="post">
+                                <button type="submit" class="logout-btn">
+                                    <i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </header>
+
+                <section class="main-section">
+
+                    <h2>Registrar Nuevo Paciente</h2>
+                    <p th:if="${error}" class="error" th:text="${error}"></p>
+
+                    <form th:action="@{/encargado/paciente/guardar}"
+                          th:object="${paciente}"
+                          method="post"
+                          onsubmit="return validarFormulario()">
+
+                        <label>Nombre:</label>
+                        <input th:field="*{nombre}" class="input-area"
+                               required
+                               pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]+"
+                               oninput="filtrarLetras(this)"
+                               title="Solo se permiten letras y espacios">
+
+                        <p class="error" th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}"></p>
+
+                        <label>Edad:</label>
+                        <input th:field="*{edad}" class="input-area" type="number" name="edad" id="edad"
+                               min="1" max="99" required
+                               oninput="validarEdad(this)">
+                        <p class="error" th:if="${#fields.hasErrors('edad')}" th:errors="*{edad}"></p>
+
+                        <label>Teléfono:</label>
+                        <input th:field="*{telefono}" class="input-area" required>
+                        <p class="error" th:if="${#fields.hasErrors('telefono')}" th:errors="*{telefono}"></p>
+
+                        <label>Correo:</label>
+                        <input th:field="*{email}" class="input-area" required>
+                        <p class="error" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></p>
+
+                        <button type="submit">Registrar paciente</button>
+
+                    </form>
+
+                </section>
+            </main>
+        </div>
+    </body>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("userMenu");
+            menu.classList.toggle("active");
+        }
+
+        document.addEventListener("click", function(e){
+            const userInfo = document.querySelector(".user-info");
+            const menu = document.getElementById("userMenu");
+
+            if (!userInfo.contains(e.target)) {
+                menu.classList.remove("active");
+            }
+        });
+
+        function validarEdad(input) {
+            if (input.value.length > 2) {
+                input.value = input.value.slice(0, 2);
+            }
+        }
+
+        function filtrarLetras(input) {
+            input.value = input.value.replace(/[^A-Za-zÁÉÍÓÚáéíóúÑñ ]/g, "");
+        }
+    </script>
+</html>

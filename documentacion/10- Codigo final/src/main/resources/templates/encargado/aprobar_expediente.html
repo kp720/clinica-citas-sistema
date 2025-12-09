@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Detalles de Expediente - Salud Integral</title>
+        <link rel="stylesheet" th:href="@{/css/style3.css}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    </head>
+
+    <body>
+        <div class="dashboard">
+            <aside class="sidebar">
+                <div class="logo">
+                    <img th:src="@{/img/logo.png}" alt="Logo" class="logo">
+                    <h2>Salud Integral</h2>
+                </div>
+
+                <!-- Barra lateral de la página -->
+                <nav class="menu">
+                    <p class="menu-title">Menú Principal</p>
+                    <ul>
+                        <li><a th:href="@{/encargado/home}" ><i class="fa-solid fa-house"></i> Inicio</a></li>
+                        <li><a th:href="@{/encargado/citas}"><i class="fa-solid fa-calendar-check"></i> Citas</a></li>
+                        <li><a th:href="@{/encargado/expedientes}" class ="active"><i class="fa-solid fa-folder-open"></i> Expedientes</a></li>
+                        <li><a th:href="@{/encargado/pacientes}"><i class="fa-solid fa-user-injured"></i> Pacientes </a></li>
+                        <li><a th:href="@{/encargado/doctores}"><i class="fa-solid fa-user-doctor"></i> Doctores </a></li>
+                    </ul>
+                </nav>
+
+                <div class="footer">
+                    <p>© 2025 Salud Integral</p>
+                </div>
+            </aside>
+
+            <!-- Contenido principal de la página -->
+            <main class="content">
+
+                <header>
+                    <div class="user-info" onclick="toggleMenu()">
+                        <i class="fa-solid fa-user"></i>
+                        <span th:text="${encargadoNombre}">Encargado</span>
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+
+                        <div id="userMenu" class="dropdown-menu">
+                            <a th:href="@{/encargado/perfil}" class="profile-btn">
+                                <i class="fa-solid fa-id-badge"></i> Mi Perfil
+                            </a>
+
+                            <form th:action="@{/logout}" method="post">
+                                <button type="submit" class="logout-btn">
+                                    <i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </header>
+
+
+                <section class="main-section">
+                    <h2>Aprobar expediente</h2>
+                    <form th:action="@{/encargado/expediente/aprobar/guardar}" th:object="${expediente}" method="post">
+
+                        <input type="hidden" th:field="*{id_expediente}">
+
+                        <label>Doctor asignado:</label>
+                        <div class="readonly" th:text="${expediente.doctor.nombre}"></div>
+                        <br>
+                        <label>Paciente:</label>
+                        <div class="readonly" th:text="${expediente.paciente.nombre}"></div>
+                        <br>
+
+                        <label>Diagnóstico:</label>
+                        <textarea th:field="*{diagnosticos}"></textarea>
+
+                        <label>Observaciones:</label>
+                        <textarea th:field="*{observaciones}"></textarea>
+
+                        <label>Recetas:</label>
+                        <textarea th:field="*{recetas}"></textarea>
+
+                        <label>Tratamiento:</label>
+                        <textarea th:field="*{tratamientos}"></textarea>
+
+                        <br><br>
+
+                        <button type="submit">Aprobar expediente</button>
+                    </form>
+                </section>
+            </main>
+        </div>
+    </body>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("userMenu");
+            menu.classList.toggle("active");
+        }
+
+        document.addEventListener("click", function(e){
+            const userInfo = document.querySelector(".user-info");
+            const menu = document.getElementById("userMenu");
+
+            if (!userInfo.contains(e.target)) {
+                menu.classList.remove("active");
+            }
+        });
+    </script>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Detalles de Expediente - Salud Integral</title>
+        <link rel="stylesheet" th:href="@{/css/style3.css}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    </head>
+
+    <body>
+        <div class="dashboard">
+            <aside class="sidebar">
+                <div class="logo">
+                    <img th:src="@{/img/logo.png}" alt="Logo" class="logo">
+                    <h2>Salud Integral</h2>
+                </div>
+
+                <!-- Barra lateral de la página -->
+                <nav class="menu">
+                    <p class="menu-title">Menú Principal</p>
+                    <ul>
+                        <li><a th:href="@{/doctor/home}"><i class="fa-solid fa-house"></i> Inicio</a></li>
+                        <li><a th:href="@{/doctor/citas}"><i class="fa-solid fa-calendar-check"></i> Mis Citas</a></li>
+                        <li><a th:href="@{/doctor/expedientes}" class="active"><i class="fa-solid fa-folder-open"></i> Mis Expedientes</a></li>
+                        <li><a th:href="@{'/doctor/' + ${doctor.idDoctor} + '/pacientes'}"><i class="fa-solid fa-user"></i> Mis Pacientes</a></li>
+                    </ul>
+                </nav>
+
+                <div class="footer">
+                    <p>© 2025 Salud Integral</p>
+                </div>
+            </aside>
+
+            <!-- Contenido principal de la página -->
+            <main class="content">
+
+                <header>
+                    <div class="user-info" onclick="toggleMenu()">
+                        <i class="fa-solid fa-user"></i>
+                        <span th:text="${doctorNombre}">Doctor</span>
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+
+                        <div id="userMenu" class="dropdown-menu">
+                            <a th:href="@{/doctor/perfil}" class="profile-btn">
+                                <i class="fa-solid fa-id-badge"></i> Mi Perfil
+                            </a>
+
+                            <form th:action="@{/logout}" method="post">
+                                <button type="submit" class="logout-btn">
+                                    <i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- Detalles del expediente -->
+                <section class="main-section">
+                    <h2>Detalles del Expediente</h2>
+
+                    <div class="detalles-card">
+                        <p><strong>Paciente:</strong> <span th:text="${expediente.paciente.nombre}"></span></p>
+                        <p><strong>Doctor:</strong> <span th:text="${expediente.doctor.nombre}"></span></p>
+                        <p><strong>Estado:</strong> <span th:text="${expediente.estadoExpediente}"></span></p>
+
+                        <h3>Diagnóstico</h3>
+                        <p th:text="${expediente.diagnosticos}"></p>
+
+                        <h3>Tratamiento</h3>
+                        <p th:text="${expediente.tratamientos}"></p>
+
+                        <h3>Observaciones</h3>
+                        <p th:text="${expediente.observaciones}"></p>
+
+                        <h3>Medicamento(s) recetados:</h3>
+                        <p th:text="${expediente.recetas}"></p>
+
+                    </div>
+                    <a th:href="@{/doctor/expedientes}" class="btn-primary">
+                        <i class="fa fa-arrow-left"></i> Regresar
+                    </a>
+                </section>
+            </main>
+        </div>
+        <script>
+            function filtrarExpedientes() {
+                const input = document.getElementById('buscador').value.toLowerCase();
+                const expedientes = document.getElementsByClassName('expediente-card');
+
+                for (let expediente of expedientes) {
+                    const texto = expediente.textContent.toLowerCase();
+                    expediente.style.display = texto.includes(input) ? '' : 'none';
+                }
+            }
+            function toggleMenu() {
+                const menu = document.getElementById("userMenu");
+                menu.classList.toggle("active");
+            }
+
+            document.addEventListener("click", function(e){
+                const userInfo = document.querySelector(".user-info");
+                const menu = document.getElementById("userMenu");
+
+                if (!userInfo.contains(e.target)) {
+                    menu.classList.remove("active");
+                }
+            }
+            );
+        </script>
+    </body>
+</html>

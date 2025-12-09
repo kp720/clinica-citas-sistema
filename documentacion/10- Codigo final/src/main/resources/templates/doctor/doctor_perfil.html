@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Perfil del Doctor</title>
+        <link rel="stylesheet" th:href="@{/css/style3.css}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    </head>
+
+    <body>
+        <div class="dashboard">
+
+            <aside class="sidebar">
+                <div class="logo">
+                    <img th:src="@{/img/logo.png}" alt="Logo" class="logo">
+                    <h2>Salud Integral</h2>
+                </div>
+
+                <nav class="menu">
+                    <p class="menu-title">Menú</p>
+                    <ul>
+                        <li><a th:href="@{/doctor/home}"><i class="fa-solid fa-house"></i> Inicio</a></li>
+                        <li><a th:href="@{/doctor/citas}"><i class="fa-solid fa-calendar-check"></i> Mis Citas</a></li>
+                        <li><a th:href="@{/doctor/expedientes}"><i class="fa-solid fa-folder"></i> Mis Expedientes</a></li>
+                        <li><a th:href="@{'/doctor/' + ${doctor.idDoctor} + '/pacientes'}"><i class="fa-solid fa-users"></i> Mis Pacientes</a></li>
+                    </ul>
+                </nav>
+
+                <div class="footer"><p>© 2025 Salud Integral</p></div>
+            </aside>
+
+            <main class="content">
+                <header>
+                    <h1>Perfil del Doctor</h1>
+                </header>
+
+                <section class="main-section">
+                    <h2 th:text="${doctor.nombre}"></h2>
+
+                    <p><strong>Especialidad:</strong> <span th:text="${doctor.especialidad}"></span></p>
+                    <p><strong>Correo:</strong> <span th:text="${doctor.usuario.correo}"></span></p>
+                    <p><strong>Teléfono:</strong> <span th:text="${doctor.telefono}"></span></p>
+                    <p><strong>Horario:</strong> <span th:text="${doctor.horario_disponible}"></span></p>
+                    <br>
+                    <a th:href="@{/doctor/home}" class="btn btn-primary">Regresar al inicio</a>
+                </section>
+            </main>
+        </div>
+    </body>
+</html>
