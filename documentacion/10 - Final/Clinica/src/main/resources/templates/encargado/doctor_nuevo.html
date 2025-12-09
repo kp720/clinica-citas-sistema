@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Inicio - Salud Integral</title>
+        <link rel="stylesheet" th:href="@{/css/style3.css}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    </head>
+
+    <body>
+        <div class="dashboard">
+            <aside class="sidebar">
+                <div class="logo">
+                    <img th:src="@{/img/logo.png}" alt="Logo de la Clínica" class="logo">
+                    <h2>Salud Integral</h2>
+                </div>
+
+                <!-- Barra lateral de la página -->
+                <nav class="menu">
+                    <p class="menu-title">Menú Principal</p>
+                    <ul>
+                        <li><a th:href="@{/encargado/home}"><i class="fa-solid fa-house"></i> Inicio</a></li>
+                        <li><a th:href="@{/encargado/citas}"><i class="fa-solid fa-calendar-check"></i> Citas</a></li>
+                        <li><a th:href="@{/encargado/expedientes}"><i class="fa-solid fa-folder-open"></i> Expedientes</a></li>
+                        <li><a th:href="@{/encargado/pacientes}"><i class="fa-solid fa-user-injured"></i> Pacientes </a></li>
+                        <li><a th:href="@{/encargado/doctores}"><i class="fa-solid fa-user-doctor"></i> Doctores </a></li>
+                    </ul>
+                </nav>
+
+                <div class="footer">
+                    <p>© 2025 Salud Integral</p>
+                </div>
+            </aside>
+
+            <!-- Contenido principal de la página -->
+            <main class="content">
+                <header>
+                    <div class="user-info" onclick="toggleMenu()">
+                        <i class="fa-solid fa-user"></i>
+                        <span th:text="${encargado.nombre}">Doctor</span>
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+
+                        <!-- Menú desplegable -->
+                        <div id="userMenu" class="dropdown-menu">
+
+                            <a th:href="@{/encargado/perfil}" class="profile-btn">
+                                <i class="fa-solid fa-id-badge"></i> Mi Perfil
+                            </a>
+
+                            <form th:action="@{/logout}" method="post">
+                                <button type="submit" class="logout-btn">
+                                    <i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </header>
+
+                <section class="main-section">
+                    <div class="form-container">
+                        <h2>Registrar Nuevo Doctor</h2>
+
+                        <form th:action="@{/encargado/doctor/guardar}" th:object="${doctor}" method="post">
+
+                            <label>Nombre:</label>
+                            <input type="text" th:field="*{nombre}" class="input-area"
+                                   pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]+"
+                                   oninput="filtrarLetras(this)"
+                                   title="Solo se permiten letras y espacios"
+                                   required minlength="3">
+                            <span class="error" th:if="${#fields.hasErrors('nombre')}"
+                                  th:errors="*{nombre}"></span>
+
+                            <label>Especialidad:</label>
+                            <select th:field="*{especialidad}" required>
+                                <option value="">Seleccione una especialidad</option>
+                                <option value="Medicina General">Medicina General</option>
+                                <option value="Pediatría">Pediatría</option>
+                                <option value="Ginecología">Ginecología</option>
+                                <option value="Odontología">Odontología</option>
+                            </select>
+                            <span class="error" th:if="${#fields.hasErrors('especialidad')}"
+                                  th:errors="*{especialidad}"></span>
+
+                            <label>Horario Disponible:</label>
+                            <select th:field="*{horario_disponible}" required>
+                                <option value="">Seleccione un horario</option>
+                                <option value="08:00 - 16:00">08:00 - 16:00</option>
+                                <option value="09:00 - 17:00">09:00 - 17:00</option>
+                                <option value="10:00 - 18:00">10:00 - 18:00</option>
+                                <option value="11:00 - 19:00">11:00 - 19:00</option>
+                                <option value="12:00 - 20:00">12:00 - 20:00</option>
+                            </select>
+                            <span class="error" th:if="${#fields.hasErrors('horario_disponible')}"
+                                  th:errors="*{horario_disponible}"></span>
+
+                            <label>Teléfono:</label>
+                            <input type="text" th:field="*{telefono}" class="input-area"
+                                   required pattern="[0-9]{10}" placeholder="10 dígitos">
+                            <span class="error" th:if="${#fields.hasErrors('telefono')}"
+                                  th:errors="*{telefono}"></span>
+
+                            <label>Correo:</label>
+                            <input type="email" th:field="*{email}" class="input-area" required>
+                            <span class="error" th:if="${#fields.hasErrors('email')}"
+                                  th:errors="*{email}"></span>
+
+                            <label>Contraseña (4 dígitos):</label>
+                            <input type="password" name="passwordUsuario" class="input-area" required pattern="[0-9]{4}" maxlength="4"
+                                   placeholder="Solo 4 dígitos">
+                            <span class="error" th:if="${errorPassword != null}"
+                                  th:text="${errorPassword}"></span>
+
+                            <button type="submit" class="btn-add">Guardar</button>
+                        </form>
+
+                        <a th:href="@{/encargado/doctores}" class="btn-back">Volver</a>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </body>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("userMenu");
+            menu.classList.toggle("active");
+        }
+
+        document.addEventListener("click", function(e){
+            const userInfo = document.querySelector(".user-info");
+            const menu = document.getElementById("userMenu");
+
+            if (!userInfo.contains(e.target)) {
+                menu.classList.remove("active");
+            }
+        });
+        function filtrarLetras(input) {
+            input.value = input.value.replace(/[^A-Za-zÁÉÍÓÚáéíóúÑñ ]/g, "");
+        }
+    </script>
+</html>

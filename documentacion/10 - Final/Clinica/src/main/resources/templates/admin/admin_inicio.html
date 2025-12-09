@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Inicio - Salud Integral</title>
+        <link rel="stylesheet" th:href="@{/css/style3.css}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    </head>
+
+    <body>
+        <div class="dashboard">
+            <aside class="sidebar">
+                <div class="logo">
+                    <img th:src="@{/img/logo.png}" alt="Logo de la Clínica" class="logo">
+                    <h2>Salud Integral</h2>
+                </div>
+
+                <!-- Barra lateral de la página -->
+                <nav class="menu">
+                    <p class="menu-title">Menú Principal</p>
+                    <ul>
+                        <li><a th:href="@{/admin/home}" class="active"><i class="fa-solid fa-house"></i> Inicio</a></li>
+                        <li><a th:href="@{/admin/citas}"><i class="fa-solid fa-calendar-check"></i> Citas</a></li>
+                        <li><a th:href="@{/admin/expedientes}"><i class="fa-solid fa-folder-open"></i> Expedientes</a></li>
+                        <li><a th:href="@{/admin/pacientes}"><i class="fa-solid fa-users"></i> Pacientes</a></li>
+                        <li><a th:href="@{/admin/doctores}"><i class="fa-solid fa-user"></i> Doctores</a></li>
+                    </ul>
+                </nav>
+
+                <div class="footer">
+                    <p>© 2025 Salud Integral</p>
+                </div>
+            </aside>
+
+            <main class="content">
+                <header>
+                    <h1 th:text="${saludo} + ' Administrador!'">
+                        ¡Buenos días Administrador!
+                    </h1>
+                    <div class="user-info" onclick="toggleMenu()">
+                        <i class="fa-solid fa-user"></i>
+                        <span th:text="${doctor.nombre}">Doctor</span>
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+
+                        <!-- Menú desplegable -->
+                        <div id="userMenu" class="dropdown-menu">
+
+                            <a th:href="@{/doctor/perfil}" class="profile-btn">
+                                <i class="fa-solid fa-id-badge"></i> Mi Perfil
+                            </a>
+
+                            <form th:action="@{/logout}" method="post">
+                                <button type="submit" class="logout-btn">
+                                    <i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </header>
+
+                <section class="main-section">
+                    <h2>Panel de control</h2>
+                    <p>Desde aquí puedes gestionar tus citas y expedientes.</p>
+
+                </section>
+            </main>
+        </div>
+    </body>
+</html>

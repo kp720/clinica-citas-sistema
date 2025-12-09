@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Salud Integral</title>
+    <link rel="stylesheet" th:href="@{/css/style3.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+<div class="dashboard">
+
+    <aside class="sidebar">
+        <div class="logo">
+            <img th:src="@{/img/logo.png}" alt="Logo de la Clínica" class="logo">
+            <h2>Salud Integral</h2>
+        </div>
+
+        <nav class="menu">
+            <p class="menu-title">Menú Principal</p>
+            <ul>
+                <li><a th:href="@{/admin/home}" class="active"><i class="fa-solid fa-house"></i> Inicio</a></li>
+                <li><a th:href="@{/admin/citas}"><i class="fa-solid fa-calendar-check"></i> Citas</a></li>
+                <li><a th:href="@{/admin/expedientes}"><i class="fa-solid fa-folder-open"></i> Expedientes</a></li>
+            </ul>
+        </nav>
+
+        <div class="footer">
+            <p>© 2025 Salud Integral</p>
+        </div>
+    </aside>
+
+    <main class="content">
+        <header>
+            <h1>¡Buenos días Admnistrador!</h1>
+            <div class="user-info">
+                <i class="fa-solid fa-user"></i>
+                <span th:text="${adminNombre}">Administrador</span>
+            </div>
+        </header>
+
+        <section class="main-section">
+            <h2>Panel de control</h2>
+            <p>Desde aquí puedes gestionar tus citas y expedientes.</p>
+
+        </section>
+    </main>
+</div>
+</body>
+</html>

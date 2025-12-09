@@ -29,7 +29,7 @@ El objetivo principal de este proyecto es poder ver los diferentes procesos por 
 ### Estructura del Repositorio
 
 ```plaintext
-/documentacion
+/documentación
     /1-requerimientos
     /2-modelado-procesos
     /3-modelo-analisis
@@ -39,6 +39,8 @@ El objetivo principal de este proyecto es poder ver los diferentes procesos por 
     /7-diseños-prototipo
     /8-database
     /9-codigo-avances
+    /10-Final
+    /11-Programa-funcional
 
 /archivos-originales
     /anteproyecto
